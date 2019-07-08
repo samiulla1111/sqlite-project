@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#5fddc1"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="170dp"
+        android:layout_height="56dp"
+
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="26dp"
+        android:text="Book"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="30dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="181dp"
+        android:layout_height="54dp"
+
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:text="Author"
+        android:textAlignment="center"
+        android:textColor="#fceca4"
+        android:textSize="30dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

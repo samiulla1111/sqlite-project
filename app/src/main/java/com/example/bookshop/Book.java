@@ -6,10 +6,11 @@ public class Book {
     static String COLUMN_ID= "id";
     static String COLUMN_BOOKNAME= "bookName";
     static  String COLUMN_AUTHORNAME= "authorName";
-    static String CRAETE_TABLE_QUERY= "CREATE TABLE "+TABLE_NAME+" ("+COLUMN_ID+" INTEGER PRIMARY AUTOINCREMENT, "+COLUMN_BOOKNAME+" TEXT, "+COLUMN_AUTHORNAME +"TEXT)";
+    static String CRAETE_TABLE_QUERY= "CREATE TABLE "+TABLE_NAME+" ("+COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT , "+COLUMN_BOOKNAME+" TEXT, "+COLUMN_AUTHORNAME +" TEXT)";
+
     int id;
-    String bookname;
-    String authorname;
+    String bookName;
+    String authorName;
 
     public int getId() {
         return id;
@@ -19,19 +20,19 @@ public class Book {
         this.id = id;
     }
 
-    public String getBookname() {
-        return bookname;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setBookname(String bookname) {
-        this.bookname = bookname;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public String getAuthorname() {
-        return authorname;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setAuthorname(String authorname) {
-        this.authorname = authorname;
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
     }
 }
