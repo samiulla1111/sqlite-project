@@ -2,6 +2,7 @@ package com.example.bookshop;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextWatcher;
 import android.view.View;
 import android.content.Intent;
 import android.widget.EditText;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         deleteBooks=findViewById(R.id.button3);
         ViewBooks=findViewById(R.id.button4);
 
+
        addBooks.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -34,10 +36,19 @@ public class MainActivity extends AppCompatActivity {
                book.setAuthorName(authorName.getText().toString().toLowerCase());
       //         book.setAuthorame(name.getText().toString());
                book.setBookName(nameOfBook.getText().toString().toLowerCase());
-          //     book.setBookname(pass.getText().toString());
-               long id = dbHelperClass.addBooks(book);
+               if (nameOfBook.length() ==0) {
+                   nameOfBook.setError("Feild is blank!");
+               } else if (authorName.length() ==0) {
+                   authorName.setError("Feild is blank!");
+               }else{
+                   //     book.setBookname(pass.getText().toString());
+                   long id = dbHelperClass.addBooks(book);
 
-               Toast.makeText(MainActivity.this,"the book has been stored with id"+id,Toast.LENGTH_SHORT).show();
+                   Toast.makeText(MainActivity.this,"the book has been stored with id"+id,Toast.LENGTH_SHORT).show();
+
+               }
+
+
            }
        });
        ViewBooks.setOnClickListener(new View.OnClickListener() {
